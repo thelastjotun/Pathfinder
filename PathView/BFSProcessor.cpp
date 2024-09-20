@@ -1,5 +1,4 @@
 #include "BFSProcessor.h"
-#include <QDebug>
 #include <QPoint>
 
 #include <queue>
@@ -35,8 +34,6 @@ void BFSProcessor::process(
             int _x = x + dx, _y = y + dy;
             // и проверяем, что он свободен и не был посещен ранее
             if (_y > -1 && _y < fieldWidth && _x > -1 && _x < fieldHeight) {
-                qDebug() << _x << _y;
-
                 if (!field[_x][_y].isObstacle() && distances[_x][_y] == INF) {
                     distances[_x][_y] = distances[x][y] + 1;
                     from[_x][_y] = QPoint{ x, y };

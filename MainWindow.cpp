@@ -32,13 +32,10 @@ void MainWindow::closeEvent(QCloseEvent *event)
 
 void MainWindow::loadSettings()
 {
-    qDebug() << m_settings.value("geometry");
     restoreGeometry(m_settings.value("geometry").toByteArray());
 }
 
 void MainWindow::saveSettings()
 {
-    m_settings.setValue("geometry", this->saveGeometry());
-
-    qDebug() << m_settings.value("geometry");
+    m_settings.setValue("geometry", saveGeometry());
 }

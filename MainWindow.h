@@ -24,5 +24,5 @@ private:
     void saveSettings();
 
 private:
-    QSettings m_settings;
+    QSettings m_settings{ "MyOrg", "MyApp" };
 };

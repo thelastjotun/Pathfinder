@@ -1,6 +1,5 @@
 #include "FieldGenerator.h"
 
-#include <QDebug>
 #include <QRandomGenerator64>
 
 FieldGenerator::FieldGenerator(QObject *parent)
